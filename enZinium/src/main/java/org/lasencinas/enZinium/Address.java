@@ -11,27 +11,32 @@ public class Address {
 	private double balance = 0d;
 	private String symbol = "EZI";
 
+// Inicialización  del contructor
 	public Address() {
 
 	}
-	
+
+//Setter && Getters
 	public String getSymbol() {
 		return this.symbol;
 	}
-	
 
-	public PublicKey getPublicKey() {
+	public PublicKey getPK() {
 		return this.PK;
+	}
+
+	public PrivateKey getPrivateKey() {
+		return this.SK;
+	}
+
+	public double getBalance() {
+		return this.balance;
 	}
 
 	public void setPublicKey(PublicKey PK) {
 
 		this.PK = PK;
 
-	}
-
-	public PrivateKey getPrivateKey() {
-		return this.SK;
 	}
 
 	public void setPrivateKey(PrivateKey SK) {
@@ -42,10 +47,7 @@ public class Address {
 		this.balance = balance;
 	}
 
-	public double getBalance() {
-		return this.balance;
-	}
-
+	// Logica
 	public void generateKeyPair() {
 
 		KeyPair pair = GenSig.generateKeyPair();
@@ -53,10 +55,10 @@ public class Address {
 		setPrivateKey(pair.getPrivate());
 	}
 
+//Método toString
 	@Override
 	public String toString() {
-		return "PK = " + getPublicKey().hashCode()  + "\n" + "Balance = "
-				+ getBalance() + " " + getSymbol() +  "\n";
+		return "PK = " + getPK().hashCode() + "\n" + "Balance = " + getBalance() + " " + getSymbol() + "\n";
 	}
 
 }
