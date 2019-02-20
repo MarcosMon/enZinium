@@ -56,7 +56,7 @@ public class Address {
 	@Override
 	public String toString() {
 		return "PK = " + getPublicKey().hashCode()  + "\n" + "Balance = "
-				+ getBalance() + "\n";
+				+ getBalance() + " " + getSymbol() +  "\n";
 	}
 
 }
