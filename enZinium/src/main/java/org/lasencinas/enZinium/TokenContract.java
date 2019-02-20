@@ -7,6 +7,7 @@ public class TokenContract {
 	private PublicKey ownerPK = null;
 	private String name = null;
 	private int totalSupply = 0;
+	private String symbol = null;
 
 	public TokenContract() {
 	}
@@ -31,6 +32,24 @@ public class TokenContract {
 
 	public String getName() {
 		return this.name;
+	}
+
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
+
+	}
+
+	public String getSymbol() {
+		return this.symbol;
+	}
+
+	public void setTotalSupply(int totalSupply) {
+		this.totalSupply = totalSupply;
+
+	}
+
+	public int getTotalSupply() {
+		return this.totalSupply;
 	}
 
 }
