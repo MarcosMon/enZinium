@@ -25,9 +25,9 @@ public class TokenContractTest {
 	@Test
 	public void comprobarTotalSupply() {
 		TokenContract ricknillos = new TokenContract();
-		int totalSupply = 100;
+		double totalSupply = 100;
 		ricknillos.setTotalSupply(totalSupply);
-		assertEquals(totalSupply, ricknillos.getTotalSupply());
+		assertEquals(totalSupply, ricknillos.getTotalSupply(), 0.1);;
 	}
 
 

@@ -4,25 +4,25 @@ import java.security.PublicKey;
 
 public class TokenContract {
 
-	private PublicKey ownerPK = null;
+	private Address ownerPK = null;
 	private String name = null;
-	private int totalSupply = 0;
+	private double totalSupply = 0d;
 	private String symbol = null;
 
 	public TokenContract() {
 	}
 
-	public TokenContract(PublicKey PK) {
+	public TokenContract(Address rick) {
 
-		this.setOwnerPK(PK);
+		this.setOwnerPK(rick);
 
 	}
 
-	private void setOwnerPK(PublicKey PK) {
-		this.ownerPK = PK;
+	private void setOwnerPK(Address rick) {
+		this.ownerPK = rick;
 	}
 
-	public PublicKey getAddres() {
+	public Address getAddres() {
 		return this.ownerPK;
 	}
 
@@ -43,12 +43,18 @@ public class TokenContract {
 		return this.symbol;
 	}
 
-	public void setTotalSupply(int totalSupply) {
+	public void setTotalSupply(double totalSupply) {
 		this.totalSupply = totalSupply;
 
 	}
 
-	public int getTotalSupply() {
+	@Override
+	public String toString() {
+		return "Name = " + getName() + "\n"  + "symbol = " + getSymbol() + "\n"
+				+ "TotalSupply = " + getTotalSupply() + "\n" + "owner PK = " + getAddres().hashCode();
+	}
+
+	public double getTotalSupply() {
 		return this.totalSupply;
 	}
 
