@@ -6,6 +6,14 @@ import org.junit.Test;
 
 public class TokenContractTest {
 
+	
+	@Test
+	public void comprobarConstructor() {
+		Address rick = new Address();
+        rick.generateKeyPair();
+		TokenContract ricknillos = new TokenContract(rick);
+		assertNotNull(ricknillos);
+	}
 	@Test
 	public void comprobarNombre() {
 		
