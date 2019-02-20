@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import junit.framework.Assert;
 
-public class EnziniumTest {
+public class AddressTest {
 
 	@Test
 	public void comprobarAdress() {
